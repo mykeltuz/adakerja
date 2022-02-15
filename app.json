@@ -1,10 +1,11 @@
 {
   "expo": {
-    "name": "AdaKerja",
-    "slug": "AdaKerja",
+    "name": "AdaKerja Devs",
+    "slug": "AdaKerja-devs",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
+    "scheme": "AdaKerja",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -23,7 +24,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.mykelsure.AdaKerja"
     },
     "web": {
       "favicon": "./assets/favicon.png"
