@@ -13,6 +13,7 @@ import Loading from './src/components/Loading';
 
 import HomeScreen from './src/screens/HomeScreen'
 import LoginScreen from './src/screens/LoginScreen'
+import ResultScreen from './src/screens/ResultScreen'
 
 const AuthStack = createStackNavigator()
 
@@ -45,6 +46,10 @@ function MainStackScreen () {
       <MainStack.Screen  
         name='HomeScreen'
         component={HomeScreen}         
+      />
+      <MainStack.Screen  
+        name='ResultScreen'
+        component={ResultScreen}         
       />
     </MainStack.Navigator>    
   )

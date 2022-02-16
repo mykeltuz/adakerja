@@ -15,6 +15,11 @@ import { DEFAULT_STATE } from './default_state'
 
 const navigationStateReducer = (state = DEFAULT_STATE.navigation_state, action) => {
   switch (action.type) {		  				
+		case LOGIN_USER:
+			return {              
+				...state,
+				current_state: 'main-flow',
+			}     		 				
 		case LOGOUT_USER:
 			return {              
 				...state,

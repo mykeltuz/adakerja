@@ -46,7 +46,7 @@ export default function SearchInput (props) {
         value={props.search_query}
         onChangeText={props.onChangeText}
         returnKeyType='search'
-        placeholder='Search here'
+        placeholder={props.placeholder}
         placeholderTextColor={TextColor2}
         keyboardAppearance={props.is_light ? 'light' : 'dark'}
         ref={searchInput}
@@ -74,4 +74,5 @@ SearchInput.defaultProps = {
   onSubmit: (() => console.log('submitted')),
   is_light: true,
   width: 'auto',
+  placeholder: 'Search here',
 }

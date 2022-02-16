@@ -15,8 +15,7 @@ import {
   TextColor0,
 } from '../utils/appTheme'
 
-export default function Header(props) {
-  
+export default function Header(props) {  
   if(props.nav_action === 'go_back') {
     return (
       <View
@@ -44,6 +43,34 @@ export default function Header(props) {
             fontFamily: 'Mabry',
             fontSize: 20,
             marginHorizontal: 15,
+            textTransform: 'capitalize',
+            flex: 1,
+          }}
+        >
+          {props.title}
+        </Text>
+        {
+          props.leftChildComponent
+        }
+      </View>
+    )
+  } else {
+    return (
+      <View
+        style={{
+          paddingHorizontal: 20,
+          paddingVertical: 10,
+          alignItems:'center',
+          // justifyContent: 'space-between',
+          flexDirection: 'row',
+        }}
+      >
+        <Text
+          style={{
+            color: HeaderText1,
+            fontWeight:'500',
+            fontFamily: 'Mabry',
+            fontSize: 20,
             flex: 1,
           }}
         >

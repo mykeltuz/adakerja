@@ -17,10 +17,10 @@ import {
 } from '../utils/appTheme'
 
 
-import NotificationBell from '../../assets/svg_icons/NotificationBell'
-import ErrorIcon from '../../assets/svg_icons/ErrorIcon2'
-import SuccessIcon from '../../assets/svg_icons/SuccessIcon copy'
-import WarningIcon from '../../assets/svg_icons/WarningIcon'
+import NotificationBell from '../assets/svg_icons/NotificationBell'
+import ErrorIcon from '../assets/svg_icons/ErrorIcon2'
+import SuccessIcon from '../assets/svg_icons/SuccessIcon copy'
+import WarningIcon from '../assets/svg_icons/WarningIcon'
 
 const width = Dimensions.get("screen").width
 const height = Dimensions.get("window").height
@@ -111,9 +111,10 @@ const Message = (props) => {
             // fontFamily: 'Poppins',
             fontSize: 14,
             color: TextColor0,
+            marginTop: 6,
           }}
-          adjustsFontSizeToFit
-          numberOfLines={2}
+          // adjustsFontSizeToFit
+          // numberOfLines={2}
         >
           {props.description}
         </Text>
@@ -225,7 +226,7 @@ export default class NotificationPanel extends React.Component {
       <Animated.View
         style={{
           width: 335*VW,
-          height: 80,
+          // height: 0,
           marginHorizontal: 20,
           backgroundColor: CardColor0,
           position: 'absolute',

@@ -6,8 +6,6 @@ import {
   View,
 } from 'react-native'
 import { StatusBar } from 'expo-status-bar';
-import { connect } from 'react-redux'
-// import SafeAreaView from 'react-native-safe-area-view'
 import NetInfo from '@react-native-community/netinfo';
 import { MaterialCommunityIcons } from 'react-native-vector-icons'
 import { BlurView } from 'expo-blur'
@@ -15,7 +13,7 @@ import { BlurView } from 'expo-blur'
 // app theme colors
 import {
   ScreenBackgroundColor0,
-  AccentColor,
+  Green,
   SecondaryAccentColor,
 } from '../utils/appTheme'
 
@@ -90,7 +88,7 @@ class BaseComp extends React.PureComponent {
         >
           <BlurView
             intensity={60}
-            tint={this.props.is_light ? 'light' : 'dark'}
+            tint= 'light'
             style={{
               // backgroundColor: ScreenBackgroundColor0,
               flex: 1
@@ -102,7 +100,7 @@ class BaseComp extends React.PureComponent {
                 flex: 1,
               },
               (this.state.display_status === 'show_success') && ({
-                backgroundColor: SecondaryAccentColor,
+                backgroundColor: Green,
               }),
               (this.state.display_status === 'show_error') && ({
                 backgroundColor: 'red',
@@ -134,7 +132,7 @@ class BaseComp extends React.PureComponent {
                           style={{
                             width: width,
                             height: 25,
-                            backgroundColor: SecondaryAccentColor,
+                            backgroundColor: Green,
                             flexDirection: 'row',
                             alignItems: 'center',
                             justifyContent: 'center',
@@ -206,13 +204,13 @@ class BaseComp extends React.PureComponent {
     } else if (this.props.bg_type === 'solid_color') {
       return (
         <SafeAreaView 
-          // barStyle="dark-content" 
+          barStyle="dark-content" 
           style={[{
             flex: 1,
             color: 'black'
           },
           (this.state.display_status === 'show_success') && ({
-            backgroundColor: SecondaryAccentColor,
+            backgroundColor: Green,
           }),
           (this.state.display_status === 'show_error') && ({
             backgroundColor: 'red',
@@ -228,7 +226,7 @@ class BaseComp extends React.PureComponent {
                 style={{
                   width: width,
                   height: 25,
-                  backgroundColor: SecondaryAccentColor,
+                  backgroundColor: Green,
                   flexDirection: 'row',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -292,7 +290,7 @@ class BaseComp extends React.PureComponent {
           >
             {this.props.children}
           </View>
-          <StatusBar style={this.state.display_status === 'show_nothing' ? (this.props.is_light ? 'dark' : 'light') : 'light'} />
+          <StatusBar style={this.state.display_status === 'show_nothing' ? 'dark' : 'light'} />
       
         </SafeAreaView>        
       )
@@ -302,13 +300,4 @@ class BaseComp extends React.PureComponent {
   
 }
 
-
-const mapStateToProps = state => ({
-  is_light: state.theme.is_light,
-})
-
-// const mapDispatchToProps = {
-//   getUserCurrentLocationAsync,
-// }
-
-export default connect(mapStateToProps)(BaseComp)
+export default BaseComp
