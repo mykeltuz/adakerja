@@ -7,5 +7,8 @@
 
 
 ## Future Updates
+  - Unit testing
+  - Integrated testing
+  - End-to-End testing
   - Details pop up for each commit within a repo
   - Clickable buttons that directs users to the commit on GitHub with an embedded in-app browser
